@@ -1,0 +1,231 @@
+body {
+    background: white;
+    font-family: 'Montserrat',sans-serif;
+}
+
+header {
+    background: inherit;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+}
+
+header {
+    padding-top: .5em;
+}
+
+header div img {
+    width: 20%;
+}
+
+header nav {
+    display: flex;
+    width: 80%;
+}
+
+.nav-link {
+    margin-right: 3em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+main {
+    border: 2px solid dodgerblue;
+    margin: 4em 25em;
+    text-align: center;
+}
+
+main * {
+    margin-top: 2em;
+}
+
+main input {
+    margin-top: .5em;
+}
+
+main input[type="submit"] {
+    background: dodgerblue;
+    color: white;
+    font-size: 110%;
+    font-weight: bold;
+    width: 7.5vw;
+}
+
+#features  {
+    display: grid;
+    grid-template-rows: repeat(3,33.3%);
+    grid-template-columns: 25% 75%;
+    height: 40vw;
+    text-align: left;
+}
+
+#features img {
+    align-self: center;
+    justify-self: center;
+    margin: auto;
+    width: 100%;
+}
+
+#features div {
+    padding-left: 2em;
+}
+
+#features #img1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end:2;
+}
+
+#features #desc1{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  
+}
+
+#features #img2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+#features #desc2 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-column-end: 3;
+}
+
+#features #img3 {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-column-end: 2;
+}
+/*Brought to you by https://css-tricks.com/fluid-width-video/#aa-iframe-video-youtube-vimeo-etc*/
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#tutorials {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+}
+
+#tutorials div {
+  border: 2px solid black;
+  border-radius: 1em;
+  margin-top: .5em;
+  width: 50%;
+}
+
+#tutorials div img {
+  width: 30%;
+}
+
+@media (max-width: 1300px) {
+  main {margin: 0;}
+  main input[type="submit"] {width: auto;}
+  #features {
+    height: 50vw;
+  }
+  #features img {
+    width: 75%;
+  }
+  .fDiv, .fDiv h3 {
+    margin-top: 0;}
+}
+
+@media (max-width: 761px) {
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #nav-bar {
+    justify-content: center;
+  }
+  
+  .nav-link {margin: auto;}
+  #tutorials div {width: 75%;}
+}
+
+@media (max-width: 650px) {
+  #features {
+    grid-row-gap: 3em;
+    margin-bottom: 2em;}
+  #vidHeader {
+    margin-top: 5em;
+  }
+  .videoWrapper {margin-top: 0;}
+}
+
+@media (max-width: 538px) {
+  
+  #features {
+    grid-row-gap: 5em;
+  }
+  #features img {
+    width: 100%;
+  }
+  #nav-bar {
+    flex-direction: column;
+  }
+  #vidHeader {
+    margin-top: 10em;
+  }
+  #tutorials div {width: 100%;}
+}
+
+@media (max-width: 459px) {
+  #features {
+    grid-row-gap: 7em;
+  }
+  #vidHeader {
+    margin-top: 15em;
+  }
+}
+
+@media (max-width: 379px) {
+  #features {
+    grid-row-gap: 9em;
+  }
+  #vidHeader {
+    margin-top: 18em;
+  }
+}
+
+@media (max-width: 342px) {
+  #features {
+    grid-row-gap: 13em;
+  }
+  #vidHeader {
+    margin-top: 24em;
+  }
+}
+@media(max-width: 288px) {
+  #features {
+    grid-row-gap: 17em;
+  }
+  #vidHeader {
+    margin-top: 33em;
+  }
+}
